@@ -45,3 +45,92 @@ body{
     text-decoration: none;
     display: inline-block;
 }
+header{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between; /* separa el título y el menú */
+
+}
+/*Titulo*/
+header h1{
+    margin: 0;
+    font-size: 36px;
+    font-family: 'cursive';
+}
+
+.menu {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Enlaces del menú principal */
+.menu a {
+float: left;
+color: white;
+text-align: center;
+    padding: 14px 20px;
+text-decoration: none;
+}
+
+/* Al pasar el mouse cambia el color */
+.menu a:hover {
+background-color: #575757;
+}
+
+/* Contenedor del menú desplegable */
+.dropdown {
+float: left;
+overflow: hidden;
+}
+
+/* Botón del desplegable */
+.dropdown .dropbtn {
+cursor: pointer;
+font-size: 16px;
+border: none;
+outline: none;
+color: rgb(0, 0, 0);
+padding: 14px 20px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
+
+/* Contenido del menú desplegable */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #444;
+min-width: 160px;
+box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+z-index: 1;
+
+}
+
+/* Enlaces dentro del desplegable */
+.dropdown-content a {
+float: none;
+color: white;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-content a:hover {
+background-color: #666;
+}
+
+/* Mostrar el menú al pasar el mouse */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown .dropbtn img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
