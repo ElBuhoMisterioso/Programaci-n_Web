@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ARAYA</title>
+</head>
+<body>
+    <di>
+    <header>
+        <h1>ARAYA</h1>
+  <div class="menu">
+    <a href="file:///C:/Users/juan%20sebastian/Documents/GitHub/Programaci-n_Web/principal.html#inicio"> Introducción</i></a>
+    <a href="file:///C:/Users/juan%20sebastian/Documents/GitHub/Programaci-n_Web/inicio.html">Inicio</a>
+    <a href="#contacto"></a>
+  </div>
+      <div class="dropdown">
+    <button class="dropbtn">
+      <img src="imagenes/usuario.png" alt="Barios" width="30" height="30">
+    </button>
+    <div class="dropdown-content">
+      <a href="file:///C:/Users/juan%20sebastian/Documents/GitHub/Programaci-n_Web/index.html">Iniciar Sección</a>
+      <a href="file:///C:/Users/juan%20sebastian/Documents/GitHub/Programaci-n_Web/register.html">Registrarse</a>
+    </div>
+  </div>
+    </div>
+    </header>
+    <section class="galeria">
+  <h2>Explora y comparte tus diseños</h2>
+  
+  <div class="subir-foto">
+    <input type="file" id="inputFoto" accept="image/*">
+    <button onclick="subirFoto()">Subir imagen</button>
+  </div>
+
+  <div id="galeriaFotos" class="contenedor-fotos">
+    <!-- Aquí aparecerán las imágenes subidas -->
+  </div>
+    </section>
+    <script>
+function subirFoto() {
+  const input = document.getElementById('inputFoto');
+  const galeria = document.getElementById('galeriaFotos');
+
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      // Crear contenedor de la imagen
+      const div = document.createElement('div');
+      div.classList.add('foto-item');
+
+      // Crear imagen
+      const img = document.createElement('img');
+      img.src = e.target.result;
+
+      // Crear botón de eliminar
+      const boton = document.createElement('button');
+      boton.innerText = "×";
+      boton.classList.add('boton-eliminar');
+
+      // Acción para eliminar
+      boton.onclick = function() {
+        galeria.removeChild(div);
+      };
+
+      // Agregar imagen y botón al contenedor
+      div.appendChild(img);
+      div.appendChild(boton);
+      galeria.appendChild(div);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+</script>
+
+    <footer>
+        <p>@2025 Footer</p>
+    </footer>
+    
+</body>
+</html>
