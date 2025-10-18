@@ -52,7 +52,8 @@ header{
     justify-content: space-between;
     display: flex;
     justify-content: space-between; /* separa el título y el menú */
-
+    border: 2px solid #000; /* Borde negro */
+    border-radius: 15px; /* Bordes redondeados */
 }
 /*Titulo*/
 header h1{
@@ -64,7 +65,9 @@ header h1{
 .menu {
   background-color: #333;
   overflow: hidden;
+    border-radius: 15px;
 }
+
 
 /* Enlaces del menú principal */
 .menu a {
@@ -133,4 +136,48 @@ display: block;
   width: 35px;
   height: 35px;
   cursor: pointer;
+}
+
+.hl{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 28px;
+    color: #333;
+}
+
+/*Se va a iniciar con 3 div para mostrar la introducción*/
+
+.intro {
+  display: flex;                 /* Pone los 3 cuadros en una fila */
+  justify-content: space-around; /* Espaciado entre ellos */
+  align-items: stretch;
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 50px 20px;
+  gap: 20px;                     /* Espacio entre columnas */
+}
+
+.intro-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex: 1;                       /* Cada caja ocupa el mismo ancho */
+  transition: transform 0.3s ease;
+}
+
+.intro-box:hover {
+  transform: translateY(-10px);  /* Efecto al pasar el mouse */
+}
+
+.intro-box h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.intro-box p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
 }
