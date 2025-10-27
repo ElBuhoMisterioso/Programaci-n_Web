@@ -37,6 +37,12 @@
   <div id="galeriaFotos" class="contenedor-fotos">
     <!-- Aquí aparecerán las imágenes subidas -->
   </div>
+
+  <div class="gallery" id="myGallery">
+    <h2>Mis diseños subidos</h2>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+
     </section>
     <script>
 function subirFoto() {
@@ -72,6 +78,27 @@ function subirFoto() {
     };
 
     reader.readAsDataURL(input.files[0]);
+  }
+
+  function uploadImage() {
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      // Mostrar vista previa individual
+      preview.innerHTML = `<img src="${e.target.result}" alt="Imagen subida">`;
+
+      // Agregar a la galería
+      const galleryGrid = document.getElementById('galleryGrid');
+      const newImage = document.createElement('img');
+      newImage.src = e.target.result;
+      newImage.alt = 'Diseño subido';
+      galleryGrid.appendChild(newImage);
+    };
+    reader.readAsDataURL(file);
+  } else {
+    alert('Por favor, selecciona una imagen primero.');
+  }
   }
 }
 </script>
