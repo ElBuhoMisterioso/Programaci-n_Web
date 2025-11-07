@@ -25,5 +25,166 @@
   </div>
     </div>
     </header>
+
+    <h1 id="">Bienvenido</h1>
+
+
+<div class="card-container">
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <p>Tu imagen aparecerá aquí</p>
+      </div>
+      <div class="card-back">
+        <h3>Especificaciones</h3>
+        <p>- Tamaño: 1080x1080 px</p>
+        <p>- Formato: PNG/JPG</p>
+        <p>- Autor: Usuario</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <p>Tu imagen aparecerá aquí</p>
+      </div>
+      <div class="card-back">
+        <h3>Especificaciones</h3>
+        <p>- Tamaño: 1080x1080 px</p>
+        <p>- Formato: PNG/JPG</p>
+        <p>- Autor: Usuario</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <p>Tu imagen aparecerá aquí</p>
+      </div>
+      <div class="card-back">
+        <h3>Especificaciones</h3>
+        <p>- Tamaño: 1080x1080 px</p>
+        <p>- Formato: PNG/JPG</p>
+        <p>- Autor: Usuario</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <p>Tu imagen aparecerá aquí</p>
+      </div>
+      <div class="card-back">
+        <h3>Especificaciones</h3>
+        <p>- Tamaño: 1080x1080 px</p>
+        <p>- Formato: PNG/JPG</p>
+        <p>- Autor: Usuario</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <p>Tu imagen aparecerá aquí</p>
+      </div>
+      <div class="card-back">
+        <h3>Especificaciones</h3>
+        <p>- Tamaño: 1080x1080 px</p>
+        <p>- Formato: PNG/JPG</p>
+        <p>- Autor: Usuario</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <p>Tu imagen aparecerá aquí</p>
+      </div>
+      <div class="card-back">
+        <h3>Especificaciones</h3>
+        <p>- Tamaño: 1080x1080 px</p>
+        <p>- Formato: PNG/JPG</p>
+        <p>- Autor: Usuario</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <p>Tu imagen aparecerá aquí</p>
+      </div>
+      <div class="card-back">
+        <h3>Especificaciones</h3>
+        <p>- Tamaño: 1080x1080 px</p>
+        <p>- Formato: PNG/JPG</p>
+        <p>- Autor: Usuario</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <p>Tu imagen aparecerá aquí</p>
+      </div>
+      <div class="card-back">
+        <h3>Especificaciones</h3>
+        <p>- Tamaño: 1080x1080 px</p>
+        <p>- Formato: PNG/JPG</p>
+        <p>- Autor: Usuario</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Modal -->
+  <div class="modal" id="reviewModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h3>Reseñas del diseño</h3>
+      <p>⭐️⭐️⭐️⭐️☆ (4.2/5)</p>
+      <p>"Excelente composición y colores!"</p>
+      <p>"Buen uso del espacio negativo."</p>
+    </div>
+  </div>
+
+  <script>
+    // Mostrar imagen subida
+    const imageUpload = document.getElementById("imageUpload");
+    const cardFront = document.querySelector(".card-front");
+
+    imageUpload.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          cardFront.innerHTML = `<img src="${e.target.result}" alt="Diseño subido">`;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Modal al hacer clic
+    const card = document.getElementById("designCard");
+    const modal = document.getElementById("reviewModal");
+    const closeModal = document.getElementById("closeModal");
+
+    card.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    });
+  </script>
+
+    <footer>
+        <p>@2025 Footer</p>
+    </footer>
+
 </body>
 </html>
